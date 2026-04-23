@@ -24,7 +24,6 @@ jobs:
           node-version: '24.x'
 
       - name: npm install, build, and test
-        working-directory: ./danghw8b
         run: |
           npm install
           npm run build --if-present
@@ -52,9 +51,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_6D0E78A6D3934382A01E2025056DB709 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_AD6F965E9E45418C99EE971C45383FE3 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_22569D0ABB2848E994CD215E33720007 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_CF1CBE16934B475D90EE993C79E4159F }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_619C9EAFBF30455CBE068C381C15FFC6 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_EF660B05252448C39168B04184044DCD }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
